@@ -1,0 +1,37 @@
+<div class="jumbotron text-center">
+  <h1><a href="/car/new_car">My Car</a></h1>
+  <h3><%= @car.get_car %></h3>
+</div>
+<!-- <h3>Lights are on? <%= @car.light_status %></h3> -->
+<hr/>
+
+<div class="container-fluid text-center">
+
+
+<form action="/simulator/change_lights" method="get">
+  <button type="submit" class="btn btn-default btn-lg">Lights are: <%= @car.light_status ? "On" : "Off" %></button>
+
+</form>
+<hr/>
+<h3>Current Speed: <%= @car.get_speed %></h3>
+
+<form action="/simulator/speed_up" method="get">
+  <button type="submit" class="btn btn-default btn-lg">Accelerate</button>
+</form>
+<br/>
+
+<form action="/simulator/brake" method="get">
+  <button type="submit" class="btn btn-default btn-lg">Slow Down</button>
+</form>
+<hr/>
+<h3>Parking Break is: <%= @car.parkingbrake?%></h3>
+<form action="/simulator/parkingbrake" method="get">
+  <input type="radio" name="parking_brake" value="On" />
+  On<br/>
+  <input type="radio" name="parking_brake" value="Off"/>
+  Off
+  <br/>
+  <br/>
+  <button type="submit" class="btn btn-default btn-lg">Submit</button>
+</form>
+</div>

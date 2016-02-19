@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h1>Welcome to the Car Simulator</h1>
+</div>
+<form action="/car/new_car" method="get">
+  <label>Make: </label>
+  <input type="text" name="make" />
+  <label>Model Year: </label>
+  <input type="number" name="modelyear" />
+  <br/>
+  <label>Description: </label>
+  <textarea name="description" type="text" cols="50"></textarea>
+  <br/>
+  <select name="carcolor" id="colorselector">
+    <option name="carcolor">Blue</option>
+    <option name="carcolor">Red</option>
+    <option name="carcolor">Orange</option>
+    <option name="carcolor">Black</option>
+    <option name="carcolor">White</option>
+    <option name="carcolor">Grey</option>
+  </select>
+  <button type="submit">Simulate Car</button>
+</form>
